@@ -13,8 +13,18 @@ function Login(props) {
     const handlePassword = (e) => setPassword(e.target.value)
 
     useEffect(() => {
+        // If logged in and user navigates to Login page, should redirect them to dashboard 
+        if (props.auth.isAuthenticated) {
+            props.history.push("/dashboard/1");
+        }
+    }, [])
+
+    useEffect(() => {
         setErrors(props.errors)
-    }, [props.errors])
+        if (props.auth.isAuthenticated) {
+            props.history.push("/dashboard/1");
+        }
+    }, [props.auth.isAuthenticated, props.error])
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -31,12 +41,13 @@ function Login(props) {
     return (
         <div>
             <h1>Login</h1>
-            <form onSubmit={handleSubmit}>
+            <form noValidate onSubmit={handleSubmit}>
                 <label htmlFor="email">Email</label>
                 <input
                     type="email"
                     name="email"
                     id="email"
+                    error={errors.email}
                     placeholder="Email"
                     onChange={handleEmail}
                     className={classnames("", {
@@ -52,6 +63,7 @@ function Login(props) {
                     type="password"
                     name="password"
                     id="password"
+                    error={errors.password}
                     placeholder="Password"
                     onChange={handlePassword}
                     className={classnames("", {

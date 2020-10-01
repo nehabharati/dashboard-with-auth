@@ -15,8 +15,18 @@ function Register(props) {
     const handlePassword = (e) => setPassword(e.target.value)
 
     useEffect(() => {
+        // If logged in and user navigates to Register page, should redirect them to dashboard 
+        if (props.auth.isAuthenticated) {
+            props.history.push("/dashboard/1");
+        }
+    }, [])
+
+    useEffect(() => {
         setErrors(props.errors)
-    }, [props.errors])
+        if (props.auth.isAuthenticated) {
+            props.history.push("/dashboard/1");
+        }
+    }, [props.auth.isAuthenticated, props.errors])
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -34,12 +44,13 @@ function Register(props) {
     return (
         <div>
             <h1>Register</h1>
-            <form onSubmit={handleSubmit}>
+            <form noValidate onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input
                     type="text"
                     name="name"
                     id="name"
+                    error={errors.name}
                     placeholder="Name"
                     onChange={handleName}
                     className={classnames("", {
@@ -52,6 +63,7 @@ function Register(props) {
                     type="email"
                     name="email"
                     id="email"
+                    error={errors.email}
                     placeholder="Email"
                     onChange={handleEmail}
                     className={classnames("", {
@@ -64,6 +76,7 @@ function Register(props) {
                     type="password"
                     name="password"
                     id="password"
+                    error={errors.password}
                     placeholder="Password"
                     onChange={handlePassword}
                     className={classnames("", {
