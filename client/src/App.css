@@ -26,7 +26,7 @@ a:hover {
 }
 
 .brands {
-  background-color: thistle;
+  font-size: 0.8rem;
 }
 
 section div {
@@ -38,11 +38,7 @@ section div {
 .dashboard nav {
   text-align: center;
 }
-
-.dashboard h2 {
-  margin-top: 4em;
-}
-
+ 
 .dashboard nav ul {
   padding: 0.5em;
     font-size: 0.7rem;  
@@ -190,15 +186,16 @@ table input[type="text"] {
 input[type="text"]:hover, input[type="text"]:focus {
   outline: none;
 }
-
+ 
 form {
   display: flex;
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
   padding:  2em;
-  background-color: #e9e9e9;
-  border-radius: 10px;
+  background-color: #e9e9e9; 
+  border-radius: 10px; 
+  max-width: 80%;   
 }
 
 form input {
@@ -224,6 +221,10 @@ form button {
 
 form button:hover {
   background-color: #e0ad2d;
+}
+
+form p {
+  margin: 0;
 }
 
 .navbar { 
@@ -265,6 +266,11 @@ form button:hover {
   width: 80%;
 }
 
+.icons {
+  display: flex;
+  flex-direction: row; 
+}
+
 .hero div {
   align-items: flex-start; 
 }
@@ -298,7 +304,7 @@ form button:hover {
   background-color: white;
   border-radius: 10px;
   padding: 1em; 
-  width: 300px;
+  width: 80%;
   height: 450px;
   object-fit: cover;
 }
@@ -476,6 +482,15 @@ form button:hover {
 @media (min-width:1280px) {
   .hero {
     margin: 4em 14em;
+    width: 50%;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
   }
 
   .mid-section div img {
@@ -492,6 +507,7 @@ form button:hover {
 
   .secondary-info p {
     margin: 1em;
+    font-weight: 700;
   } 
 }
 

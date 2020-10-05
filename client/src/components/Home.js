@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
+import { faFileAlt, faFileContract } from '@fortawesome/free-solid-svg-icons'
 import FadeInSection from "./FadeInSection"
 
 export default function Home() {
@@ -8,8 +8,9 @@ export default function Home() {
         <div>
             <FadeInSection>
                 <section className="hero">
-                    <div>
-                        <FontAwesomeIcon icon={faFileAlt} style={{ fontSize: "2.5rem", color: "#bbb", textAlign: "left" }} />
+                    <div className="icons">
+                        <FontAwesomeIcon icon={faFileAlt} style={{ fontSize: "2.5rem", color: "#bbb", textAlign: "left", marginRight: "1em" }} />
+                        <FontAwesomeIcon icon={faFileContract} style={{ fontSize: "2.5rem", color: "#bbb", textAlign: "left", marginRight: "1em" }} />
                     </div>
                     <h2>Build your own dashboard</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam mollis orci</p>

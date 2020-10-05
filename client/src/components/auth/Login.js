@@ -39,7 +39,7 @@ function Login(props) {
     }
 
     return (
-        <div>
+        <div className="auth">
             <h1>Login</h1>
             <form noValidate onSubmit={handleSubmit}>
                 <label htmlFor="email">Email</label>
@@ -51,13 +51,12 @@ function Login(props) {
                     placeholder="Email"
                     onChange={handleEmail}
                     className={classnames("", {
-                        invalid: errors.email
-                        // || errors.emailnotfound
+                        invalid: errors.email || errors.emailnotfound
                     })}
                 />
                 <span className="red-text">
                     {errors.email}
-                    {/* {errors.emailnotfound} */}
+                    {errors.emailnotfound}
                 </span>
                 <label htmlFor="password">Password</label>
                 <input
@@ -76,8 +75,8 @@ function Login(props) {
                     {errors.passwordincorrect}
                 </span>
                 <button type="submit">Login</button>
-                <p className="grey-text text-darken-1">
-                    Don't have an account? <Link to="/register">Register</Link>
+                <p>Don't have an account?
+                    <Link to="/register"> Register</Link>
                 </p>
             </form>
         </div>

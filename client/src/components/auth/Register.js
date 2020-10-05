@@ -85,7 +85,9 @@ function Register(props) {
                 />
                 <span className="red-text">{errors.password}</span>
                 <button type="submit">Register</button>
-                <p>Already have an account? <Link to="/login">Log in</Link></p>
+                <p>Already have an account?
+                    <Link to="/login"> Login</Link>
+                </p>
             </form>
         </div>
     )
