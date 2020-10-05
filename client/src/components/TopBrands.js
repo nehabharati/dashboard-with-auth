@@ -11,7 +11,6 @@ export default function TopBrands() {
     const [doughnutLabel, setDoughnutLabel] = useState([])
     const [hops, setHops] = useState([])
 
-    // let { url } = useRouteMatch();
     let { beerId } = useParams();
 
     useEffect(() => {

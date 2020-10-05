@@ -1,4 +1,4 @@
-// Functions which provide the inouts to the charts
+// Functions which provide the inputs to the charts
 export function getBarData(details) {
     return {
         labels: ['Volume', 'Mash temp', 'Fermentation Temp', 'Attenuation level'],
