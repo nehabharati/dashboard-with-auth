@@ -24,7 +24,7 @@ function Login(props) {
         if (props.auth.isAuthenticated) {
             props.history.push("/dashboard/1");
         }
-    }, [props.auth.isAuthenticated, props.error])
+    }, [props.auth.isAuthenticated, props.errors])
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -51,12 +51,13 @@ function Login(props) {
                     placeholder="Email"
                     onChange={handleEmail}
                     className={classnames("", {
-                        invalid: errors.email || errors.emailnotfound
+                        invalid: errors.email
+                        // || errors.emailnotfound
                     })}
                 />
                 <span className="red-text">
                     {errors.email}
-                    {errors.emailnotfound}
+                    {/* {errors.emailnotfound} */}
                 </span>
                 <label htmlFor="password">Password</label>
                 <input
