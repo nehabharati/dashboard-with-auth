@@ -261,9 +261,9 @@ form p {
 .hero {
   display: flex;
   flex-direction: column; 
-  text-align: left; 
-  margin-bottom: 100px; 
+  text-align: left;  
   margin: 4em;
+  margin-bottom: 100px; 
   width: 80%;
 }
 
@@ -467,6 +467,7 @@ form p {
 @media (min-width:1280px) {
   .hero {
     margin: 4em 14em;
+    margin-bottom: 100px;
     width: 50%;
   }
 
