@@ -28,10 +28,13 @@ export default function Home() {
 
             <FadeInSection>
                 <div className="secondary-info">
-                    <div>
-                        <img src={require("../images/graph.webp")} alt="Graph" />
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>The dashboard depicts information about various beer brands. The different stats about the beer brands are
+                    shown in a tabular format.
+                    <p> The user can search for any brand. User can also search according to different
+                    parameters shown in the table.</p>
+                        <p>There's a sorting feature also available in the table.
+                    There is also a graphical representation of various parameters taken for the top 5 beer brands</p>
+                    </p>
                 </div>
             </FadeInSection>
             <FadeInSection>

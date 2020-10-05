@@ -314,26 +314,12 @@ form p {
   display: flex; 
   flex-direction: column;
   align-items: center;
-  margin: 0; 
-}
-
-.secondary-info img {
-  position: relative; 
-  padding: 1em;
-  background-color: white;
-  -webkit-box-shadow: 0 50px 140px rgba(0,0,0,.25);
-  -moz-box-shadow: 0 50px 140px rgba(0,0,0,.25);
-  box-shadow: 0 50px 140px rgba(0,0,0,.25); 
-  border-radius: 10px; 
-  width: 300px;
-  bottom: 2em; 
+  margin: 3em; 
 }
 
 .secondary-info p { 
   font-size: 1.5rem; 
-  text-align: center;
-  margin: 0;
-  margin: 0em 3em 3em 3em;  
+  text-align: center; 
 }
 
 .features {
@@ -413,7 +399,6 @@ form p {
   .mid-section div img,.secondary-info img  { 
     width: 500px;
   }  
-  
 }
 
 @media (min-width:768px) {
@@ -444,16 +429,7 @@ form p {
     justify-content: space-evenly;
     align-items: flex-start;
     margin: 4em;
-  } 
-
-  .secondary-info img { 
-    bottom: 6em; 
-    width: 500px;
-  }
-
-  .secondary-info p {
-    margin: 0;
-  } 
+  }  
 
   .mid-section div img { 
     bottom: 2em; 
@@ -515,9 +491,9 @@ form p {
   }
 
   .secondary-info p {
-    margin: 1em;
-    font-weight: 700;
+    margin: 1em; 
   } 
+
   canvas {
     padding:  6em 12em;
   }
