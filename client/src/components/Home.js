@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileAlt, faFileContract } from '@fortawesome/free-solid-svg-icons'
 import FadeInSection from "./FadeInSection"
+import { Link } from 'react-router-dom'
 
 export default function Home() {
     return (
@@ -38,17 +39,17 @@ export default function Home() {
                     <div>
                         <img src={require("../images/image.webp")} alt="Features" />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="!#">Read more &rarr;</a>
+                        <Link to="/">Read more &rarr;</Link>
                     </div>
                     <div>
                         <img src={require("../images/image.webp")} alt="Support" />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="!#">Read more &rarr;</a>
+                        <Link to="/">Read more &rarr;</Link>
                     </div>
                     <div>
                         <img src={require("../images/image.webp")} alt="Support" />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <a href="!#">Read more &rarr;</a>
+                        <Link to="/">Read more &rarr;</Link>
                     </div>
                 </section>
             </FadeInSection>
