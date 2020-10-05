@@ -20,7 +20,7 @@ export default function Home() {
             <section className="mid-section">
                 <FadeInSection>
                     <div>
-                        <img src={require("../images/dashboard_1.png")} alt="Dashboard" className="hero-img" />
+                        <img src={require("../images/dashboard.webp")} alt="Dashboard" className="hero-img" />
                     </div>
                 </FadeInSection>
             </section>
@@ -28,7 +28,7 @@ export default function Home() {
             <FadeInSection>
                 <div className="secondary-info">
                     <div>
-                        <img src={require("../images/graph.svg")} alt="Graph" />
+                        <img src={require("../images/graph.webp")} alt="Graph" />
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
@@ -36,17 +36,17 @@ export default function Home() {
             <FadeInSection>
                 <section className="features">
                     <div>
-                        <img src={require("../images/image.png")} alt="Features" />
+                        <img src={require("../images/image.webp")} alt="Features" />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <a href="!#">Read more &rarr;</a>
                     </div>
                     <div>
-                        <img src={require("../images/image.png")} alt="Support" />
+                        <img src={require("../images/image.webp")} alt="Support" />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <a href="!#">Read more &rarr;</a>
                     </div>
                     <div>
-                        <img src={require("../images/image.png")} alt="Support" />
+                        <img src={require("../images/image.webp")} alt="Support" />
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <a href="!#">Read more &rarr;</a>
                     </div>
