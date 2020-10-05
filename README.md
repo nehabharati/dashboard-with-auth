@@ -14,4 +14,9 @@ The project Case 1 is as below. Made use of the following for Dashboard
 - Table with serach and sort feature. Clicking on the table heads will sort the table 
 - Used the Hops metric obtained from Punk API and displayed it as a chart. Also used many other parameters and added it into the table
 
+The React router works as follows
+- Routes to home, login, register and dashboard pages are provided
+- Once logged in, user will not be able to go to the register page
+- Once logged out, user will be sent to home page
+
 Punk api - https://punkapi.com/documentation/
