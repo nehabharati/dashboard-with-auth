@@ -157,14 +157,12 @@ export default function AllBrands() {
                                     <div>
                                         <input
                                             type="text"
-                                            // value={query}
                                             onChange={handleSearch}
                                             placeholder="Search for a brand"
                                         />
                                         <span>
                                             <label htmlFor="date">Pick a year</label>
                                             <select name="date" id="date" onChange={handleChange}
-                                            // value={selectValue}
                                             >
                                                 <option value="">Select</option>
                                                 <option value="2015">2015</option>
