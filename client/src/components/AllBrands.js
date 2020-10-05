@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import useSortableData from "../hooks/useSortableData";
 import Fuse from 'fuse.js'
+import { getBeerData } from "../utils/getBeerData"
 
 export default function AllBrands() {
     const [beerData, setBeerData] = useState([])
@@ -8,11 +9,7 @@ export default function AllBrands() {
     const [query, setQuery] = useState("");
 
     useEffect(() => {
-        fetch('https://api.punkapi.com/v2/beers')
-            .then(res => res.json())
-            .then(data => {
-                setBeerData(data)
-            })
+        getBeerData('https://api.punkapi.com/v2/beers').then(data => setBeerData(data))
     }, [])
 
     // Used for sorting
