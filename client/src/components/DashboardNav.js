@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Route, Link } from 'react-router-dom'
 import Beer from "./TopBrands"
 import Table from "./AllBrands"
+import axios from 'axios'
 
 export default function DashboardNav() {
     const [brands, setBrands] = useState([])
     const [index, setIndex] = useState(0)
 
     useEffect(() => {
-        fetch('https://api.punkapi.com/v2/beers')
+        axios.get('https://api.punkapi.com/v2/beers')
             .then(res => res.json())
             .then(data => {
                 setBrands(data.map(i => i.name).slice(0, 5))
