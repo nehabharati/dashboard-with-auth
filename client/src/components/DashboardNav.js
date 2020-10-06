@@ -10,9 +10,9 @@ export default function DashboardNav() {
 
     useEffect(() => {
         axios.get('https://api.punkapi.com/v2/beers')
-            .then(res => res.json())
             .then(data => {
-                setBrands(data.map(i => i.name).slice(0, 5))
+                // setBrands(data.map(i => i.name).slice(0, 5))
+                console.log(data)
             })
     }, [])
 

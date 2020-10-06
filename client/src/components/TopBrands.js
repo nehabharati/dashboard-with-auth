@@ -17,7 +17,6 @@ export default function TopBrands() {
     useEffect(() => {
         //Get specific beer data and use the api to display charts 
         axios.get(`https://api.punkapi.com/v2/beers/${beerId}`)
-            .then(res => res.json())
             .then(data => data.map(property => {
                 setBeerDetails(beerDetails.splice(0, beerDetails.length))
                 setPieLabel(pieLabel.splice(0, beerDetails.length))
