@@ -3,9 +3,6 @@ import axios from 'axios'
 export function getBeerData(url) {
     return new Promise((resolve, reject) => {
         axios.get(url)
-            .then(res => {
-                console.log(res)
-                resolve(res.data)
-            })
+            .then(res => resolve(res.data))
     })
 } 
