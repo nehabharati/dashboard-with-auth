@@ -23,7 +23,6 @@ export default function useSortableData(items, config = null) {
                     }
                     return 0;
                 }
-                console.log(a[sortConfig.key])
 
                 if (a[sortConfig.key] < b[sortConfig.key]) {
                     return sortConfig.direction === "ascending" ? -1 : 1;
