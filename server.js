@@ -3,9 +3,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const passport = require("passport");
 
-// const items = require("./routes/api/items");
 const users = require("./routes/api/users");
-const auth = require("./routes/api/auth");
 
 const app = express();
 
@@ -29,10 +27,8 @@ mongoose
 app.use(passport.initialize());// Passport config
 require("./config/passport")(passport);
 
-//Use routes
-// app.use("/api/items", items);
+//Use routes 
 app.use("/api/users", users);
-// app.use("/api/auth", auth);
 
 //Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
@@ -44,6 +40,6 @@ if (process.env.NODE_ENV === "production") {
     });
 }
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 app.listen(port, () => console.log(`Server is listening on ${port}`));
