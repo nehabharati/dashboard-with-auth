@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import { Bar, Pie, Doughnut } from "react-chartjs-2";
 import "chart.js";
 import { getBarData, getBarOptions, getPieData, getPieOptions, getDoughnutData, getDoughnutOptions } from "../utils/graphData"
+import axios from 'axios';
+
 export default function TopBrands() {
     const [beerDetails, setBeerDetails] = useState([])
     const [ingredients, setIngredients] = useState([])
@@ -14,7 +16,7 @@ export default function TopBrands() {
 
     useEffect(() => {
         //Get specific beer data and use the api to display charts 
-        fetch(`https://api.punkapi.com/v2/beers/${beerId}`)
+        axios.get(`https://api.punkapi.com/v2/beers/${beerId}`)
             .then(res => res.json())
             .then(data => data.map(property => {
                 setBeerDetails(beerDetails.splice(0, beerDetails.length))
